@@ -8,8 +8,6 @@ html
     link(rel="stylesheet", href="assets/css/semantic.css")
     script(src="assets/js/jquery-3.3.1.min.js")
     script(src="assets/js/semantic.js")
-    script(src="assets/js/vue.common.js")
-    script(src="assets/js/socket.io.js")
 
     title Login - Game Panel Plus
 
@@ -33,16 +31,15 @@ html
           img.image(src='assets/images/logo.png')
           .content
             | Game Panel Plus
-        form.ui.large.form(v-on:submit.prevent='onLogin')
+        form.ui.large.form(method='post')
           .ui.stacked.segment
             .field
               .ui.left.icon.input
                 i.user.icon
-                input(type='text', name='username', placeholder='Username', v-model='username')
+                input(type='text', name='username', placeholder='Username')
             .field
               .ui.left.icon.input
                 i.lock.icon
-                input(type='password', name='password', placeholder='Password', v-model='password')
+                input(type='password', name='password', placeholder='Password')
             button.ui.fluid.large.orange.submit.button(type='submit') Login
           .ui.error.message
-    script(src="assets/js/views/login.js")
