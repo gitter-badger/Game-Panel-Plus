@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+
+    link(rel="stylesheet", href="assets/css/semantic.css")
+
+    title Login - Game Panel Plus
+
+    style(type='text/css').
+      body {
+        background-color: #DADADA;
+      }
+      body>.grid {
+        height: 100%;
+      }
+      .image {
+        margin-top: -100px;
+      }
+      .column {
+        max-width: 450px;
+      }
+  body
+    .ui.middle.aligned.center.aligned.grid
+      .column
+        h2.ui.orange.image.header
+          img.image(src='assets/images/logo.png')
+          .content
+            | Game Panel Plus
+        form.ui.large.form
+          .ui.stacked.segment
+            .field
+              .ui.left.icon.input
+                i.user.icon
+                input(type='text', name='email', placeholder='E-mail address')
+            .field
+              .ui.left.icon.input
+                i.lock.icon
+                input(type='password', name='password', placeholder='Password')
+            .ui.fluid.large.orange.submit.button Login
+          .ui.error.message

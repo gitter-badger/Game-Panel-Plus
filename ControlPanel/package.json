@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/DisruptionLogistics/Game-Panel-Plus/issues"
   },
-  "homepage": "https://github.com/DisruptionLogistics/Game-Panel-Plus#readme"
+  "homepage": "https://github.com/DisruptionLogistics/Game-Panel-Plus#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.0"
+  }
 }
