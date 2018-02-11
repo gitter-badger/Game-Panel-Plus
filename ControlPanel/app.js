@@ -3,6 +3,8 @@ const path = require('path');
 const morgan = require('morgan');
 
 const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 const Config = {
 	port: 8080
@@ -17,4 +19,4 @@ app.get('/', function (req, res) {
 	res.render('login');
 });
 
-app.listen(Config.port, () => console.log(`Game Panel Plus listening on port ${Config.port}!`));
+http.listen(Config.port, () => console.log(`Game Panel Plus listening on port ${Config.port}!`));
