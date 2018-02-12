@@ -12,16 +12,15 @@ var app = new Vue({
 
 var connected = false;
 var socket = io();
-socket.on('connect', () => {
-    connected = true;
-    checkConnection();
-});
-socket.on('disconnect', () => {
-    connected = false;
-    checkConnection();
-});
+socket.on('connect', () => changeConnectionState(true));
+socket.on('disconnect', () => changeConnectionState(false));
 
 // Server connection handler
+function changeConnectionState(state){
+    connected = state;
+    checkConnection();
+}
+
 function checkConnection(){
     if(connected !== true){
         $('body').dimmer({
@@ -36,7 +35,7 @@ function checkConnection(){
 
 // Login handler
 function onLogin(){
-    if(!checkConnection()) return;
+    if(!connected) return;
     socket.once('res.login', onLoginResponse);
     socket.emit('login', this.username, this.password);
 }
