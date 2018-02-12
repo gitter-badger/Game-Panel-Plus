@@ -3,6 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const MySQL = require('./modules/mysql');
 
 const app = express();
 const http = require('http').Server(app);
@@ -31,4 +32,5 @@ app.use('/', Routes.login);
 // Dashboard
 app.use('/dashboard', Routes.dashboard);
 
+MySQL.Connect();
 http.listen(Config.port, () => console.log(`Game Panel Plus listening on port ${Config.port}!`));

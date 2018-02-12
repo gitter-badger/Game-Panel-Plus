@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.use(function(req, res, next){
+router.use('/', function(req, res, next){
     if(typeof(req.cookies["session"]) == "undefined"){
         res.clearCookie("session");
         res.redirect("/");
