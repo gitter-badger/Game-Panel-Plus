@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/DisruptionLogistics/Game-Panel-Plus/issues"
   },
-  "homepage": "https://github.com/DisruptionLogistics/Game-Panel-Plus#readme"
+  "homepage": "https://github.com/DisruptionLogistics/Game-Panel-Plus#readme",
+  "dependencies": {
+    "coffeescript": "^2.2.1",
+    "shelljs": "^0.8.1",
+    "steamcmd": "^3.0.0",
+    "tar": "^4.3.3",
+    "unzip": "^0.1.11"
+  }
 }
