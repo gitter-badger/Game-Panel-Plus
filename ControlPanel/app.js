@@ -33,4 +33,4 @@ app.use('/', Routes.login);
 app.use('/dashboard', Routes.dashboard);
 
 MySQL.Connect();
-http.listen(Config.port, () => console.log(`Game Panel Plus listening on port ${Config.port}!`));
+http.listen(Config.port, () => console.log(`Game Panel Plus Worker (${process.pid}) listening!`));
